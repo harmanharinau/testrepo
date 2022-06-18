@@ -149,12 +149,6 @@ async def get_ststs(bot, message):
     size = get_size(size)
     free = get_size(free)
     await rju.edit(script.STATUS_TXT.format(files, total_users, totl_chats, size, free))
-
-
-@Client.on_message(filters.command('Contact') & filters.incoming) 
-async def media(bot, message):
-    if len(message.command) == 1:
-        return await message.reply('ᴛʜᴀɴᴋs ғᴏʀ ᴜsɪɴɢ ᴏᴜʀ ʙᴏᴛ...ᴄᴏɴᴛᴀᴄᴛ ᴏᴡɴᴇʀ https://t.me/CyniteOfficial')
        
 
 # a function for trespassing into others groups, Inspired by a Vazha
