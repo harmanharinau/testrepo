@@ -40,6 +40,8 @@ async def contact(_, message):
                 InlineKeyboardButton('♻️ ʜᴇʟᴘ ♻️', url=f"https://t.me/{temp.U_NAME}?start=help")
             ]
             ]
+reply_markup = InlineKeyboardMarkup(buttons)
+        await message.reply(script.CONTACT.format(message.from_user.mention if message.from_user else message.chat.title, temp.U_NAME, temp.B_NAME), reply_markup=reply_markup)
 
 @Client.on_message(filters.command("group", COMMAND_HAND_LER) & f_onw_fliter)
 async def group(_, message):
