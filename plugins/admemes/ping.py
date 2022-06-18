@@ -37,7 +37,6 @@ async def contact(_, message):
                 InlineKeyboardButton('𝙿𝚁𝙸𝚅𝙰𝚃𝙴 𝙱𝙾𝚃', url=f"https://t.me/Aadhi011")
             ]
             ]
-        reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply(script.PRIVATEBOT_TXT.format(message.from_user.mention if message.from_user else message.chat.title, temp.U_NAME, temp.B_NAME), reply_markup=reply_markup)
 
 @Client.on_message(filters.command("group", COMMAND_HAND_LER) & f_onw_fliter)
