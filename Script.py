@@ -175,9 +175,6 @@ Do as you wish with telegra.ph module!
 <b>›› 𝚆𝙸𝚃𝙷 𝚈𝙾𝚄𝚁 𝙾𝚆𝙽𝙴𝚁𝚂𝙷𝙸𝙿</b>
 <b>›› 𝙲𝙾𝙽𝚃𝙰𝙲𝚃 𝙼𝙴 <a href=https://t.me/teamx69>нαямαи</a></b>"""
 
-CONTACT_TXT = """<b>ʜᴇʏ ᴛʜᴀɴᴋs ғᴏʀ ᴜsɪɴɢ ᴏᴜʀ ʙᴏᴛ ᴄᴏɴᴛᴀᴄᴛ ᴍᴇ ʙᴇʟᴏᴡ</b>
-<b>›› 𝙲𝙾𝙽𝚃𝙰𝙲𝚃 𝙼𝙴 <a href=https://t.me/CyniteOffiical>нαямαи</a></b>"""
-
     JSON_TXT ="""<b>JSON:</b>
 
 Bot returns json for all replied messages with /json
