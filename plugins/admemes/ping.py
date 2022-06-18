@@ -9,7 +9,7 @@ from plugins.helper_functions.cust_p_filters import f_onw_fliter
 
 # -- Constants -- #
 ALIVE = "You are not dead. You are still here. You have no love for me now. Okay .. you're not changed like you used to be..🙂" 
-CONTACT = "<b>ᴏᴡɴᴇʀ ›› ʜᴇʏ ᴛʜᴀɴᴋs ғᴏʀ ᴜsɪɴɢ ᴏᴜʀ ʙᴏᴛ ᴄᴏɴᴛᴀᴄᴛ ᴍᴇ ʙᴇʟᴏᴡ</b>"
+HOW_TO_OWN = "<b>ᴏᴡɴᴇʀ ›› ʜᴇʏ ᴛʜᴀɴᴋs ғᴏʀ ᴜsɪɴɢ ᴏᴜʀ ʙᴏᴛ ᴄᴏɴᴛᴀᴄᴛ ᴍᴇ ʙᴇʟᴏᴡ</b>"
 CHANNEL = "<b>𝚈𝙾𝚄𝚃𝚄𝙱𝙴 𝙲𝙷𝙰𝙽𝙽𝙴𝙻</b> ›› https://youtube.com/channel/UCMzFIpsfTkZfkI-O20o1gww\n\n<b>𝚄𝙿𝙳𝙰𝚃𝙴𝚂 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 ›› https://t.me/cynitebots</b>\n\n<b>𝙲𝙷𝙰𝙽𝙽𝙴𝙻 ›› https://t.me/cynitemovies</b>"
 ZSEARCHERBOT = "<b>𝙱𝙾𝚃 ›› https://t.me/zsearcherbot</b>"
 # -- Constants End -- #
@@ -29,9 +29,32 @@ async def ping(_, message):
     await rm.edit(f"Pong!\n{time_taken_s:.3f} ms")
 
 
-@Client.on_message(filters.command("contact", COMMAND_HAND_LER) & f_onw_fliter)
-async def contact(_, message):
-    await message.reply_text(CONTACT)
+C = "**Video Link [Zsᴇᴀʀᴄʜᴇʀ](https://youtu.be/MfUjmZ1mpfc)**"
+F = InlineKeyboardMarkup(
+[[
+     InlineKeyboardButton("𝚄𝙿𝙳𝙰𝚃𝙴𝚉 𝙲𝙷𝙰𝙽𝙽𝙴𝙻", url="https://t.me/cynitebots")
+]]
+)
+
+
+
+
+@bot.on_message(filters.command("How_to_own"))
+async def HOW_TO_OWN(_, message):
+    if not message.reply_to_message:
+        return await message.reply_text(
+            "**𝚁𝙴𝙿𝙻𝚈 𝚃𝙾 𝙰𝙽𝚈 𝚃𝙴𝚇𝚃 𝙼𝙴𝚂𝚂𝙰𝙶𝙴.**"
+        )
+    if not message.reply_to_message.text:
+        return await message.reply_text(
+            "**𝚁𝙴𝙿𝙻𝚈 𝚃𝙾 𝙰𝙽𝚈 𝚃𝙴𝚇𝚃 𝙼𝙴𝚂𝚂𝙰𝙶𝙴.**"
+        )
+    user_id = message.from_user.id
+    m = await message.reply_text("**Getting Link...**")
+    HOW_TO_OWN = await HOW_TO_OWN(message.reply_to_message.text)
+    await m.edit("**𝚄𝙿𝙻𝙾𝙰𝙳𝙸𝙽𝙶 https://youtu.be/MfUjmZ1mpfc...**")
+    
+
 
 @Client.on_message(filters.command("group", COMMAND_HAND_LER) & f_onw_fliter)
 async def group(_, message):
