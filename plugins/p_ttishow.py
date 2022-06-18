@@ -155,14 +155,7 @@ async def get_ststs(bot, message):
 async def media(bot, message):
     if len(message.command) == 1:
         return await message.reply('ᴛʜᴀɴᴋs ғᴏʀ ᴜsɪɴɢ ᴏᴜʀ ʙᴏᴛ...ᴄᴏɴᴛᴀᴄᴛ ᴏᴡɴᴇʀ https://t.me/CyniteOfficial')
-        buttons = [
-            [
-                InlineKeyboardButton('💠 ᴄʜᴀɴɴᴇʟ 💠', url='https://t.me/cynitebots')
-            ],
-            [
-                InlineKeyboardButton('♻️ ʜᴇʟᴘ ♻️', url=f"https://t.me/{temp.U_NAME}?start=help")
-            ]
-            ]
+       
 
 # a function for trespassing into others groups, Inspired by a Vazha
 # Not to be used , But Just to showcase his vazhatharam.
