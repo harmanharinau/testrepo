@@ -27,34 +27,7 @@ async def ping(_, message):
     end_t = time.time()
     time_taken_s = (end_t - start_t) * 1000
     await rm.edit(f"Pong!\n{time_taken_s:.3f} ms")
-
-
-Button = "**Video Link [Zsᴇᴀʀᴄʜᴇʀ](https://youtu.be/MfUjmZ1mpfc)**"
-Button = InlineKeyboardMarkup(
-[[
-     InlineKeyboardButton("𝚄𝙿𝙳𝙰𝚃𝙴𝚉 𝙲𝙷𝙰𝙽𝙽𝙴𝙻", url="https://t.me/cynitebots")
-]]
-)
-
-
-
-
-@bot.on_message(filters.command("How_to_own"))
-async def HOW_TO_OWN(_, message):
-    if not message.reply_to_message:
-        return await message.reply_text(
-            "**𝚁𝙴𝙿𝙻𝚈 𝚃𝙾 𝙰𝙽𝚈 𝚃𝙴𝚇𝚃 𝙼𝙴𝚂𝚂𝙰𝙶𝙴.**"
-        )
-    if not message.reply_to_message.text:
-        return await message.reply_text(
-            "**𝚁𝙴𝙿𝙻𝚈 𝚃𝙾 𝙰𝙽𝚈 𝚃𝙴𝚇𝚃 𝙼𝙴𝚂𝚂𝙰𝙶𝙴.**"
-        )
-    user_id = message.from_user.id
-    m = await message.reply_text("**Getting Link...**")
-    HOW_TO_OWN = await HOW_TO_OWN(message.reply_to_message.text)
-    await m.edit("**𝚄𝙿𝙻𝙾𝙰𝙳𝙸𝙽𝙶 https://youtu.be/MfUjmZ1mpfc...**")
     
-
 
 @Client.on_message(filters.command("group", COMMAND_HAND_LER) & f_onw_fliter)
 async def group(_, message):
@@ -70,4 +43,8 @@ async def channel(_, message):
 async def Zsearcherbot(_, message):
     await message.reply_text(ZSEARCHERBOT)
 
+
+@Client.on_message(filters.command("How_To_Own", COMMAND_HAND_LER) & f_onw_fliter)
+async def How_To_Own(_, message):
+    await message.reply_text(HOW_TO_OWN)
 
