@@ -29,9 +29,9 @@ async def ping(_, message):
     await rm.edit(f"Pong!\n{time_taken_s:.3f} ms")
 
 
-@Client.on_message(filters.command("updates", COMMAND_HAND_LER) & f_onw_fliter)
-async def updates(_, message):
-    await message.reply_text(updates)
+@Client.on_message(filters.command("repo", COMMAND_HAND_LER) & f_onw_fliter)
+async def repo(_, message):
+    await message.reply_text(hey)
 
 
 @Client.on_message(filters.command("group", COMMAND_HAND_LER) & f_onw_fliter)
