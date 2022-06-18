@@ -29,8 +29,8 @@ async def ping(_, message):
     await rm.edit(f"Pong!\n{time_taken_s:.3f} ms")
 
 
-C = "**Video Link [Zsᴇᴀʀᴄʜᴇʀ](https://youtu.be/MfUjmZ1mpfc)**"
-F = InlineKeyboardMarkup(
+Button = "**Video Link [Zsᴇᴀʀᴄʜᴇʀ](https://youtu.be/MfUjmZ1mpfc)**"
+Button = InlineKeyboardMarkup(
 [[
      InlineKeyboardButton("𝚄𝙿𝙳𝙰𝚃𝙴𝚉 𝙲𝙷𝙰𝙽𝙽𝙴𝙻", url="https://t.me/cynitebots")
 ]]
