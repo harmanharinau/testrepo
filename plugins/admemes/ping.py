@@ -45,7 +45,7 @@ async def channel(_, message):
 
 
 @Client.on_message(filters.command("zsearcher", COMMAND_HAND_LER) & f_onw_fliter)
-async def zsearcher(_, message):
+async def Zsearcherbot(_, message):
     await message.reply_text(zsearcher)
 
 
