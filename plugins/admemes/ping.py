@@ -32,7 +32,14 @@ async def ping(_, message):
 @Client.on_message(filters.command("contact", COMMAND_HAND_LER) & f_onw_fliter)
 async def contact(_, message):
     await message.reply_text(CONTACT)
-
+    buttons = [
+            [
+                InlineKeyboardButton('💠 ᴄʜᴀɴɴᴇʟ 💠', url='https://t.me/cynitebots')
+            ],
+            [
+                InlineKeyboardButton('♻️ ʜᴇʟᴘ ♻️', url=f"https://t.me/{temp.U_NAME}?start=help")
+            ]
+            ]
 
 @Client.on_message(filters.command("group", COMMAND_HAND_LER) & f_onw_fliter)
 async def group(_, message):
