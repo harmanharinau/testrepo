@@ -41,7 +41,7 @@ async def contact(_, message):
             ]
             ]
 reply_markup = InlineKeyboardMarkup(buttons)
-        await message.reply(ping.CONTACT.format(message.from_user.mention if message.from_user else message.chat.title, temp.U_NAME, temp.B_NAME), reply_markup=reply_markup)
+        await message.reply(Script.CONTACT_TXT.format(message.from_user.mention if message.from_user else message.chat.title, temp.U_NAME, temp.B_NAME), reply_markup=reply_markup)
 
 @Client.on_message(filters.command("group", COMMAND_HAND_LER) & f_onw_fliter)
 async def group(_, message):
