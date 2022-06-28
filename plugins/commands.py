@@ -353,11 +353,9 @@ async def delete_all_index(bot, message):
                     InlineKeyboardButton(
                         text="❄ 𝐂𝐚𝐧𝐜𝐞𝐥 ❄", callback_data="close_data"
                     )
-                ],
+                ]
             ]
-        ),
-        quote=True,
-    )
+   
 @Client.on_callback_query(filters.regex(r'^autofilter_delete'))
 async def delete_all_index_confirm(bot, message):
     await Media.collection.drop()
