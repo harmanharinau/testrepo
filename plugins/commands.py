@@ -350,7 +350,7 @@ async def delete_all_index(bot, message):
             [
                 [
                     InlineKeyboardButton(
-                        text="⚡ 𝐎𝐩𝐞𝐧 ⚡", https://telegra.ph/Commands-06-28"
+                        text="⚡ 𝐎𝐩𝐞𝐧 ⚡', url=f"https://telegra.ph/Commands-Of-OkFilterBot-06-28"
                     )
                 ],
                 [
