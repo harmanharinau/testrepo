@@ -347,10 +347,9 @@ async def delete_all_index(bot, message):
     await message.reply_text(
         '**ᴄʟɪᴄᴋ ᴏɴ ᴏᴘᴇɴ ᴛᴏ ᴏᴘᴇɴ ɪᴛ .\nᴅᴏ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴏᴘᴇɴ ɪᴛ..??**',
         reply_markup=InlineKeyboardMarkup
-            [
-                [
-                    InlineKeyboardButton(
-                        text="⚡ 𝐎𝐩𝐞𝐧 ⚡', url=f"https://telegra.ph/Commands-Of-OkFilterBot-06-28")], [
+            [[
+            InlineKeyboardButton('⚡𝐎𝐩𝐞𝐧⚡', url=f'https://telegra.ph/Commands-Of-OkFilterBot-06-28')
+        ], [
                     InlineKeyboardButton(
                         text="❄ 𝐂𝐚𝐧𝐜𝐞𝐥 ❄", callback_data="close_data"
                     )
