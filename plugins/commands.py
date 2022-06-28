@@ -342,6 +342,26 @@ async def delete_all_index(bot, message):
     )
 
 
+@Client.on_message(filters.command('Commands') & filters.user(ADMINS))
+async def delete_all_index(bot, message):
+    await message.reply_text(
+        '**ᴄʟɪᴄᴋ ᴏɴ ᴏᴘᴇɴ ᴛᴏ ᴏᴘᴇɴ ɪᴛ .\nᴅᴏ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴏᴘᴇɴ ɪᴛ..??**',
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        text="⚡ 𝐎𝐩𝐞𝐧 ⚡", https://telegra.ph/Commands-06-28"
+                    )
+                ],
+                [
+                    InlineKeyboardButton(
+                        text="❄ 𝐂𝐚𝐧𝐜𝐞𝐥 ❄", callback_data="close_data"
+                    )
+                ],
+            ]
+        ),
+        quote=True,
+    )
 @Client.on_callback_query(filters.regex(r'^autofilter_delete'))
 async def delete_all_index_confirm(bot, message):
     await Media.collection.drop()
